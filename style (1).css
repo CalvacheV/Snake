@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #00ff00, #ff00ff);
+    animation: backgroundChange 10s infinite;
+}
+
+@keyframes backgroundChange {
+    0% {
+        background: linear-gradient(45deg, #00ff00, #ff00ff);
+    }
+    25% {
+        background: linear-gradient(45deg, #0000ff, #ffff00);
+    }
+    50% {
+        background: linear-gradient(45deg, #ff0000, #00ffff);
+    }
+    75% {
+        background: linear-gradient(45deg, #ff00ff, #00ff00);
+    }
+    100% {
+        background: linear-gradient(45deg, #00ff00, #ff00ff);
+    }
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    background-color: #b5c7a3;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, #c4e7c8 1px, transparent 1px),
+                      linear-gradient(to bottom, #c4e7c8 1px, transparent 1px);
+}
+
+.info-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    font-family: 'Chewy', cursive;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contact {
+    margin-left: 10px;
+}
+
+.score-board {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.score-board .icon {
+    margin: 0 5px;
+}
+
+.score-board .score, .score-board .high-score {
+    font-size: 20px;
+}
